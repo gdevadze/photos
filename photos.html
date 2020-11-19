@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+ 
+	</style>
+	
+</head>
+<body>
+
+
+<script type="text/javascript">
+	var images = [
+		{
+			src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
+			title: 'Text 1'
+		},
+		{
+			src: "https://i.pinimg.com/originals/bf/82/f6/bf82f6956a32819af48c2572243e8286.jpg",
+			title: 'Text 2'
+		},
+		{
+			src: "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__340.jpg",
+			title: 'Text 3'
+		},
+		{
+			src: "https://images2.alphacoders.com/103/1039991.jpg",
+			title: 'Text 4'
+		},
+		{
+			src: "https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?size=626&ext=jpg",
+			title: "Text 5"
+		},
+		{
+			src: "https://i.pinimg.com/originals/2e/bc/06/2ebc06af2137fc647f3d048d2b2797e4.jpg",
+			title: "Text 6"
+		},
+		{
+			src: "https://c0.wallpaperflare.com/preview/2/667/706/black-and-blue-lighten-portal.jpg",
+			title: "Text 7"
+		},		
+		{
+			src: "https://i.insider.com/5d8e410a2e22af787d59ae3f?width=1100&format=jpeg&auto=webp",
+			title: "Text 8"
+		},		
+		{
+			src: "https://i.insider.com/5d8e38632e22af1ef04dfe06?width=1100&format=jpeg&auto=webp",
+			title: "Text 9"
+		},
+		{
+			src: "https://i.insider.com/5d8e37cf2e22af1b8803afdd?width=1100&format=jpeg&auto=webp",
+			title: "Text 10"
+		},
+	];
+
+
+
+shuffle(images).map(img => {
+	let oImg = document.createElement("img");
+	let p = document.createElement("label");
+	oImg.setAttribute('src', img.src);
+	oImg.setAttribute('title', img.title)
+	p.innerHTML = img.title
+	p.style.display = 'block'
+	oImg.width = '100';
+	document.body.appendChild(oImg);
+	document.body.appendChild(p);
+})
+
+
+function shuffle(array) {
+    let i = array.length;
+
+    while (i--) {
+
+        let j = Math.floor(Math.random() * (i+1));
+		let k = Math.floor(Math.random() * (i+1));
+        // swap randomly chosen element with current element
+        let temp = array[k];
+        array[k] = array[j];
+        array[j] = temp;
+
+    }
+
+    return array;
+}
+            
+</script>
+
+
+</body>
+</html>
